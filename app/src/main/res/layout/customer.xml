@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/brown"
+
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Quản Lý Khách Hàng"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <EditText
+                android:id="@+id/etStaffName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Tên Khách Hàng"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:background="@drawable/border_black" />
+
+            <EditText
+                android:id="@+id/etStaffEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:hint="Email Khách Hàng"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/border_black" />
+
+            <EditText
+                android:id="@+id/etStaffPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Số Điện Thoại Khách Hàng"
+                android:layout_marginLeft="5dp"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:background="@drawable/border_black" />
+        </LinearLayout>
+
+        <!-- Ảnh khách hàng -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCustomer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border_black"
+                android:contentDescription="Ảnh khách hàng"
+                android:src="@drawable/customer" />
+
+            <ImageButton
+                android:id="@+id/btnRefresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="button resfesh"
+                android:src="@drawable/refesh"
+                android:background="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Hàng nút hành động -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnAddCustomer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Thêm"
+            android:textSize="12sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnUpdateCustomer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Sửa"
+            android:background="@drawable/custom_button"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnDeleteCustomer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Xóa"
+            android:background="@drawable/custom_button"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnSearchCustomer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Tìm"
+            android:background="@drawable/custom_button"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+    <!-- Danh sách khách hàng -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCustomerList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <!-- Thanh điều hướng dưới -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brown_bottom"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+</LinearLayout>

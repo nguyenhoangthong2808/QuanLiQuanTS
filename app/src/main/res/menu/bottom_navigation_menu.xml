@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/img_6"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_task"
+        android:icon="@drawable/img_7"
+        android:title="Task" />
+    <item
+        android:id="@+id/nav_customer"
+        android:icon="@drawable/img_8"
+        android:title="Customer" />
+    <item
+        android:id="@+id/nav_storehouse"
+        android:icon="@drawable/img_9"
+        android:title="StoreHouse" />
+    <item
+        android:id="@+id/nav_staff"
+        android:icon="@drawable/img_13"
+        android:title="Staff" />
+</menu>

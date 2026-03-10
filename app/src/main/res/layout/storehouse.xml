@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+   >
+
+    <!-- Tiêu đề trang -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nguyên Liệu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:background="@color/brown" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStoreHouse"
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_black"
+        android:clipToPadding="false"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_storehouse" />
+
+
+    <EditText
+        android:id="@+id/edtTextName"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_black"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="Nhập Tên Nguyên Liệu"
+        android:inputType="text" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:id="@+id/editTextType"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_black"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="Nhập Loại Nguyên Liệu"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_black"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="Nhập Số Lượng"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/btnThemVatLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/brown"
+            android:textColor="#FFF"
+            android:padding="12dp"
+
+            android:drawablePadding="8dp" />
+
+        <!-- Nút Sửa -->
+        <Button
+            android:id="@+id/btnSuaVatLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sửa"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/brown"
+            android:textColor="#FFF"
+            android:padding="12dp"
+
+            android:drawablePadding="8dp" />
+
+        <!-- Nút Xóa -->
+        <Button
+            android:id="@+id/btnXoaVatLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:backgroundTint="@color/brown"
+            android:textColor="#FFF"
+            android:padding="12dp"
+            android:drawablePadding="8dp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brown"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>

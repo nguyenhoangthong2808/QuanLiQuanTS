@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/img_31">
+
+
+    <ImageButton
+        android:id="@+id/imgloa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="180dp"
+        android:layout_height="155dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo"
+        android:src="@drawable/logom" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Đăng Nhập"
+        android:textColor="#F6F0F0"
+        android:textSize="30dp"
+
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_15" />
+
+        <ImageView
+            android:id="@+id/imageView29"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_19" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_26" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_15" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/usernameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+         android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint=" Tài Khoản"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+
+
+
+    <EditText
+
+        android:id="@+id/passworldText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint=" Mật Khẩu"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Đăng Nhập" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_button"
+        android:padding="12dp"
+        android:text="Đăng Ký"
+        android:textSize="14sp"
+        app:backgroundTint="@null" />
+
+
+</LinearLayout>

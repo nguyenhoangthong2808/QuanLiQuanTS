@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/img_31">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="182dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo"
+        android:src="@drawable/logom" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Đăng Ký"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- Tên tài khoản -->
+    <EditText
+        android:id="@+id/usernameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint=" Tài Khoản"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <!-- Mật khẩu -->
+    <EditText
+        android:id="@+id/passworldText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint=" Mật Khẩu"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <!-- Xác nhận mật khẩu -->
+    <EditText
+        android:id="@+id/confirmPasswordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint=" Xác Nhận Mật Khẩu"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <!-- Nút đăng ký -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Đăng Ký" />
+
+    <!-- Nút quay lại đăng nhập -->
+    <Button
+        android:id="@+id/btnBackToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Đã Có Tài Khoản? Đăng Nhập" />
+
+</LinearLayout>

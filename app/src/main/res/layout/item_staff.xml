@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/imageStaff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/employees"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_black"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tvStaffName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Khách Hàng"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvStaffGT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giới Tính" />
+        <TextView
+            android:id="@+id/tvStaffPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số Điện Thoại" />
+    </LinearLayout>
+</LinearLayout>
