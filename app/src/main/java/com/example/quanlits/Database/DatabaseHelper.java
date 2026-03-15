@@ -160,10 +160,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace(); // In lỗi nếu xảy ra
+            e.printStackTrace(); 
         } finally {
             if (cursor != null && !cursor.isClosed()) {
-                cursor.close(); // Đảm bảo đóng cursor
+                cursor.close(); 
             }
         }
 
@@ -171,12 +171,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void insertTask(String task) {
-        openDatabase(); // Mở cơ sở dữ liệu nếu chưa mở
+        openDatabase(); 
         try {
             String query = "INSERT INTO NV (Task) VALUES (?)";
-            mDatabase.execSQL(query, new Object[]{task}); // Chèn nhiệm vụ vào bảng NV
+            mDatabase.execSQL(query, new Object[]{task});
         } catch (Exception e) {
-            e.printStackTrace(); // Ghi lại lỗi nếu xảy ra
+            e.printStackTrace(); 
         }
     }
 
@@ -198,13 +198,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     // Phương thức chèn tài khoản vào bảng TK
     public void insertUser(String username, String password) {
-        openDatabase(); // Mở cơ sở dữ liệu nếu chưa mở
+        openDatabase(); 
         try {
-            // Câu truy vấn SQL để chèn dữ liệu vào bảng TK
+          
             String query = "INSERT INTO TK (Name, Password) VALUES (?, ?)";
             mDatabase.execSQL(query, new Object[]{username, password});
         } catch (Exception e) {
-            e.printStackTrace(); // Ghi lại lỗi nếu có
+            e.printStackTrace(); 
         }
     }
 
